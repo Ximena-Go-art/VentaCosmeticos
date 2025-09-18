@@ -9,8 +9,8 @@ namespace Service.Models
     public class VentaDetalle
     {
         public int Id { get; set; }
-        public int VentaId { get; set; }
-        public int ProductoId { get; set; }
+        public Venta venta { get; set; }
+        public Producto producto { get; set; }
         public int Cantidad { get; set; }
         public decimal PrecioUnitario { get; set; }
         public decimal PrecioTotal => Cantidad * PrecioUnitario;
@@ -19,7 +19,7 @@ namespace Service.Models
 
         public override string ToString()
         {
-            return $"Se vendio: {ProductoId}, Cant: {Cantidad} al precio de: {PrecioUnitario:C}, en total seria: {PrecioTotal}";
+            return $"Se vendio: {producto}, Cant: {Cantidad} al precio de: {PrecioUnitario:C}, en total seria: {PrecioTotal}";
         }
     }
 }

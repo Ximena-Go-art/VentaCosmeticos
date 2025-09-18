@@ -6,12 +6,12 @@
         public string Nombre { get; set; } = string.Empty;
         public string Correo { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty; // Hash recomendado
-        public RolEnum Rol { get; set; }
+        public Rol rol { get; set; }
         public bool IsDeleted { get; set; } = false;
 
         public override string ToString()
         {
-            return $"{Nombre} ({Rol}) - {Correo}";
+            return $"{Nombre} ({rol}) - {Correo}";
         }
     }
 }

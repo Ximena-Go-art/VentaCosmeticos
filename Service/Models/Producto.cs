@@ -11,7 +11,7 @@ namespace Service.Models
         public int Id { get; set; }
         public string Nombre { get; set; } = string.Empty;
         public string Descripcion { get; set; } = string.Empty;
-        public TiposCategoriaEnums Categoria { get; set; }
+        public Categoria Categoria { get; set; }
         public decimal Precio { get; set; }
         public int Stock { get; set; }
         public bool IsDeleted { get; set; } = false;
@@ -19,7 +19,7 @@ namespace Service.Models
 
         public override string ToString()
         {
-            return $"{Nombre} -{TiposCategoriaEnums}- {Precio:C}";
+            return $"{Nombre} -{Categoria}- {Precio:C}";
         }
     }
 }

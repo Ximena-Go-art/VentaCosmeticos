@@ -10,7 +10,7 @@ namespace Service.Models
     {
         public int Id { get; set; }
         public string Nombre { get; set; } = string.Empty;
-        public string Descripcion { get; set; } = string.Empty;
+        public MenuRol menuRol { get; set; }
         public bool IsDeleted { get; set; } = false;
 
     }

@@ -9,8 +9,8 @@ namespace Service.Models
     public class MenuRol
     {
         public int Id { get; set; }
-        public int IdMenu { get; set; }
-        public int IdRol { get; set; }
+        public Menu menu { get; set; }
+        public Rol rol { get; set; } 
         public bool IsDeleted { get; set; } = false;
 
     }
